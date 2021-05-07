@@ -2,9 +2,8 @@ package com.example.demo;
 
 public class OrderRequest {
     private Integer orderId;
-    private String paymentType;
-    private Integer totalPrice;
-    private Integer discount;
+    private Integer itemCount;
+    private String message;
 
     public Integer getOrderId() {
         return orderId;
@@ -14,27 +13,19 @@ public class OrderRequest {
         this.orderId = orderId;
     }
 
-    public String getPaymentType() {
-        return paymentType;
+    public Integer getItemCount() {
+        return itemCount;
     }
 
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
+    public void setItemCount(Integer itemCount) {
+        this.itemCount = itemCount;
     }
 
-    public Integer getTotalPrice() {
-        return totalPrice;
+    public String getMessage() {
+        return message;
     }
 
-    public void setTotalPrice(Integer totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public Integer getDiscount() {
-        return discount;
-    }
-
-    public void setDiscount(Integer discount) {
-        this.discount = discount;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

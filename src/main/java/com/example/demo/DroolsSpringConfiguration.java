@@ -18,7 +18,7 @@ public class DroolsSpringConfiguration {
     @Bean
     public KieContainer getKieContainer() {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        kieFileSystem.write(new ClassPathResource("discount.drl"));
+        kieFileSystem.write(new ClassPathResource("cart.drl"));
         KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
         kb.buildAll();
         KieModule kieModule = kb.getKieModule();

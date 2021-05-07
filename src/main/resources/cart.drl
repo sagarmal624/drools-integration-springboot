@@ -1,0 +1,15 @@
+import  com.example.demo.OrderRequest;
+
+rule "Person is trying to order more than 10 Items"
+    when
+        orderObject : OrderRequest(itemCount > 10 );
+    then
+    throw new Exception("Maximum Limit Exceeds");
+end;
+
+rule "Person is trying to order 1-10 Items"
+    when
+        orderObject : OrderRequest( itemCount > 0 && itemCount <11 );
+    then
+        orderObject.setMessage("Order is accepted");
+end;
