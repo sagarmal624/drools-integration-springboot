@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import org.drools.core.io.impl.ClassPathResource;
 import org.kie.api.KieServices;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class DroolsSpringConfiguration {
+public class DroolsConfig {
 
     private final KieServices kieServices = KieServices.Factory.get();
 
@@ -24,5 +24,6 @@ public class DroolsSpringConfiguration {
         KieModule kieModule = kb.getKieModule();
         return kieServices.newKieContainer(kieModule.getReleaseId());
     }
+
 
 }
