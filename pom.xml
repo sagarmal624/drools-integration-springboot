@@ -91,6 +91,18 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.example</groupId>
+                <artifactId>governance-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
